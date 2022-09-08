@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" pwd="" id="pward">password
+    <br>
+    <input type="text" cpwd="" id="cpward">confirm password
+    <br>
+    <input type="submit" onclick="validateform()">
+    <br>
+    <b id="done"></b>
+    <script>
+      function validateform()
+      {
+        var password=document.getElementById('pward').value
+        var cpassword=document.getElementById('cpward').value
+        if(password!=cpassword)
+        {
+          alert("passwords do not match!..");
+          return false;
+        }
+        else
+        {
+          document.getElementById('done').innerHTML="ok"
+        }
+        if(password=="")
+        {
+          alert("password is required");
+          return false;
+        }
+      }
+     
+    </script>
+</body>
+</html>
